@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Social</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+    <script>
+        function buscar(){
+        //pegar valor do campo input do html e armazenar em uma variável
+        var valor = $("#valor").val();
+
+        $.ajax({
+            url:"fazerbusca.php",
+            method: "GET",
+            data: { busca: valor},
+            success: function(data){
+                $("#resultado").html(data);
+            }
+        });
+
+        }
+
+        $(document).ready(function(){
+            buscar();
+        });
+    </script>
+  </head>
+
+ <body>
+    
+    <div class="painel">
+        
+        <div class="cabecalho">
+            <img class="foto" src="kosmos.jpg" alt="">
+            <br>
+            
+        </div>
+            
+            <div class="conteudo">
+                
+                <h3><i>Fazer Postagem</i></h3>
+                <form action="salvar.php" method="POST">
+                    <textarea name="Postagem" id="postagem" cols="25" rows="7" placeholder="O que você está pensando..."></textarea>
+                    <br>
+                    <br>
+                    <input class="enviar" type="submit" value="postar">
+                </form>
+            </div>
+            
+                <div class="rodape">
+
+                    <a href="index.html" class="botao">Fazer Nova Postagem</a>
+                    <a href="cookie.html" class="botao"> Cadastrar Usuario </a>
+                    <a href="busca.html" class="botao">   Buscar            </a>
+                    <a href="lista.php" class="botao"> Lista de Posts       </a>
+                </div>
+
+                   
+            </div>
+ 
+</body>
+
+  </html>
