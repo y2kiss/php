@@ -1,0 +1,78 @@
+.painel{
+    min-width: 350px;
+    width: 500px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.486);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 100;
+}
+.login{
+    text-align: center;
+    
+}
+.usuario{
+    font-size: 100px;
+    padding-left: 180px;
+    text-shadow: 2px 2px 10px rgba(89, 104, 185, 0.705);
+    color: rgb(247, 247, 255);
+}
+.botao {
+    width: 100px;
+    height: 40px;
+    background-color: #251e55;
+    color: white;
+    box-shadow: 2px 2px 10px;
+    border-radius: 10px;
+
+}
+.menu{
+    background-color: rgb(117, 119, 121);
+    min-width: 250px;
+    color: white;
+    height: 100vh;
+    list-style: none;
+}
+/* Faça o menu desaparecer no celular */
+@media (max-width: 768px){
+    .menu{
+        display: none;
+    }
+}
+.item{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-style: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: -50px;
+    margin-top: 10px;
+}
+ul{
+    list-style: none;
+}
+.item:hover{
+    background-color: rgba(255, 255, 255, 0.363);
+    transition: 1s;
+    text-decoration: none;
+    box-shadow: 1px 1px 10px black;
+    color: white;
+}
+
+.cartao{
+    box-shadow: 2px 2px 10px gray;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+

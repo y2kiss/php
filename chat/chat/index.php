@@ -49,7 +49,7 @@
 
         <?php
             
-                $sql = "SELECT usuario, mensagem, id FROM  tabela_mensagens";
+                $sql = "SELECT usuario, mensagem, id FROM  tabela_mensagens ORDER BY id DESC";
 
                 $resultado = $conexao -> query($sql);
 
